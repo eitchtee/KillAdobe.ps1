@@ -18,6 +18,7 @@ if ((Test-Admin) -eq $false)  {
 
 # Kill general Adobe processes
 Get-Process -Name Adobe* | Stop-Process -Force
+Get-Process -Name "Creative Cloud*" | Stop-Process -Force
 Get-Process -Name CCLibrary | Stop-Process -Force
 Get-Process -Name CCXProcess | Stop-Process -Force
 Get-Process -Name CoreSync | Stop-Process -Force
